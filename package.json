@@ -1,0 +1,24 @@
+{
+  "name": "api-todolist",
+  "version": "1.0.0",
+  "description": "Tugas membuat api sederhana",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fadhil04/api-todoList.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fadhil04/api-todoList/issues"
+  },
+  "homepage": "https://github.com/Fadhil04/api-todoList#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
