@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./openapi.json');
 
 let tasks = [
     {id: 1, title: "Buy milk", done:false},
@@ -9,6 +11,8 @@ let tasks = [
 ]
 
 app.use(express.json());
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 app.get('/', (req, res) => {
   res.json({
@@ -84,7 +88,7 @@ app.delete('/tasks/:id', (req, res) => {
     }
 
     tasks.splice(index, 1);
-    res.status(204).send;
+    res.status(204).send();
 });
 
 
